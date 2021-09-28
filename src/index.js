@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const handlebars = require('express-handlebars');
+const router = require('./router.js')
 
 const app = express();
 const port = 3000;
@@ -14,8 +15,6 @@ app.engine('hbs',handlebars({
 }))
 app.set('view engine','hbs');
 
-app.get('/',(req, res)=>{
-    res.render('index')
-})
+app.use(router);
 
 app.listen(port,()=>console.log(`Express running on port: ${port}...`))
