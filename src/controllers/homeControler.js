@@ -1,6 +1,7 @@
 const express = require('express');
 const Cube = require('../models/createCube.js');
 
+
 const homeRouter = new express.Router();
 
 homeRouter.get('/', (req, res) => {
@@ -13,7 +14,8 @@ homeRouter.get('/', (req, res) => {
 
 homeRouter.get('/search', (req, res) => {
     let { search, from, to } = req.query;
-
+    let cubes = Cube.searchCube(search, from, to);
+    res.render('index', { cubes });
 })
 
 module.exports = homeRouter;
