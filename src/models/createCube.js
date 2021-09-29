@@ -32,6 +32,10 @@ class Cube {
     static findCube(cubeId) {
         return Cube.cubes.find(x => x.id === cubeId);
     }
+
+    static searchCube(){
+        
+    }
 }
 
 module.exports = Cube;

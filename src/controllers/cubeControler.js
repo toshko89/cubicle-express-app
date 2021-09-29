@@ -18,7 +18,7 @@ cubeControler.post('/create',(req,res)=>{
 
 cubeControler.get('/:cubeId',(req,res)=>{
     let currentCube = Cube.findCube(req.params.cubeId)
-    res.render('details',{currentCube});
+    res.render('details',{...currentCube});
 })
 
 module.exports = cubeControler;
