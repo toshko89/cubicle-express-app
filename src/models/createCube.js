@@ -1,4 +1,5 @@
 const id = require('uniqid');
+const fs = require('fs');
 
 class Cube {
 
@@ -26,6 +27,10 @@ class Cube {
 
     static add(cube) {
         Cube.#DB.push(cube)
+    }
+
+    static findCube(cubeId) {
+        return Cube.cubes.find(x => x.id === cubeId);
     }
 }
 

@@ -11,9 +11,4 @@ homerRouter.get('/',(req,res)=>{
 
 })
 
-homerRouter.get('/details',(req,res)=>{
-    
-})
-
-
 module.exports = homerRouter;
