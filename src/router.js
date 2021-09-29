@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const homeControler = require('./controllers/homeControler.js');
 const cubeControler = require('./controllers/cubeControler.js');
 

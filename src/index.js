@@ -10,6 +10,7 @@ app.use(express.static(path.resolve(__dirname,'./static')));
 app.use(express.urlencoded({extended:true}))
 
 app.set('views',path.resolve(__dirname,'./views'));
+
 app.engine('hbs',handlebars({
     extname:'hbs'
 }))
